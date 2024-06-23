@@ -1,6 +1,7 @@
 # Gestion-des-dates-de-excel-R
 
-THIS is my original data:## I've out the functioin  "The function.Rmd"
+THIS is my original data:
+## I've out the functioin  "The function.Rmd"
 
 
 

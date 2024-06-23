@@ -1,0 +1,46 @@
+```{r}
+ if(!require('janitor')) install.packages('janitor');library('janitor')
+ if(!require('tidyverse')) install.packages('tidyverse');library('tidyverse')
+ if(!require('readxl')) install.packages('readxl');library('readxl')
+
+
+
+
+
+transform_dates <- function(date_column) {
+  for (i in seq_along(date_column)) {
+    date_str <- date_column[i]
+    if (!is.na(date_str) && grepl("^\\d{2}/\\d{2}/\\d{4}$", date_str)) {
+      parts <- strsplit(date_str, "/")[[1]]
+      transformed_date <- paste(parts[3], sprintf("%02d", as.integer(parts[2])), 
+                                sprintf("%02d", as.integer(parts[1])), sep = "-")
+      date_column[i] <- transformed_date
+    }
+  }
+  
+  return(date_column)
+}
+```
+
+
+
+```{r}
+data_test <- data.frame(
+    Column1 = c("01/08/1992", "30/01/1987", "08/09/2000", "16/12/2004", "04/10/2016", "25/01/2021", "28/03/2023", "26/04/2009", "22/11/1995", "27/02/1987"),
+    Column2 = c(NA,"01/08/2021", NA, "45227", "17/02/2022", "09/08/2020", "30/09/2022", "45307", "20/11/2020", NA),
+    Column3 = c("45135","45243","45349","45343","45320","45342","45327","45329","45349","45281" )
+  )
+
+data_test
+```
+
+
+```{r}
+Date_en_format <- colnames(data_test)
+
+for (var in Date_en_format) {
+  data_test[[var]] <- convert_to_date(transform_dates(data_test[[var]]))
+}
+data_test
+```
+

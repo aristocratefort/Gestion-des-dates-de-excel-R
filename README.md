@@ -1,6 +1,6 @@
 # Gestion-des-dates-de-excel-R
 
-THIS is my original data:
+THIS is my original data:## I've out the functioin  "The function.Rmd"
 
 
 
@@ -144,7 +144,6 @@ After correction the data i have :
 
 
 
-I've out the functioin  "The function.Rmd"
 
 
 

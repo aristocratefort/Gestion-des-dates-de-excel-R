@@ -1,6 +1,6 @@
 # Gestion-des-dates-de-excel-R
 
-THIS is my data
+THIS is my original data:
 
 
 
@@ -141,3 +141,10 @@ After correction the data i have :
     </tr>
   </tbody>
 </table>
+
+
+
+I've out the functioin  "The function.Rmd"
+
+
+

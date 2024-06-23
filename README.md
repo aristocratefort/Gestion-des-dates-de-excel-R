@@ -2,35 +2,7 @@
 
 THIS is my data
 
-<style>
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
 
-table, th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: center;
-}
-
-thead {
-    background-color: #f2f2f2;
-}
-
-th, td {
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-}
-
-th:first-child, td:first-child {
-    border-left: 1px solid black;
-}
-
-tbody tr:last-child td {
-    border-bottom: none;
-}
-</style>
 
 <table>
   <thead>
